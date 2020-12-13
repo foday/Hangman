@@ -7,3 +7,9 @@ def get_valid_word(words):
         word = random.choice(words)
 
     return word.upper()
+
+def hangman():
+    word = get_valid_word(words) #in the hangman function get_valid_word words will be stored in the word variable
+    word_letters = set(word) #letters in the word
+    alphabet = set(string.ascii_uppercase)
+    used_letters = set() #what the user has guessed
